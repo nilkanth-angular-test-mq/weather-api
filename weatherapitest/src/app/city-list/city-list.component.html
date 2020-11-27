@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-lg-12 alert alert-danger">Weather Details for top 5 cities of UK</div>
+    <div class="col-lg-4" *ngFor="let city of listOfCities ; let i = index">
+        <app-city [city]="city" (currentSelectedCity)="currentSelectedCity($event)"></app-city>
+    </div>
+    <div class="col-lg-12" *ngIf="currentSelectedCityName">
+        <div class="col-lg-12 alert alert-danger">Sealevel details for <b>{{currentSelectedCityName}}</b> for next 5
+            days at 9</div>
+        <app-city-details [currentSelectedCity]="currentSelectedCityName">
+        </app-city-details>
+    </div>
+</div>

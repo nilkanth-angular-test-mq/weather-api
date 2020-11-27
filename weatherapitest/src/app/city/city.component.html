@@ -1,0 +1,23 @@
+<div class="alert alert-info" role="info" (click)="selectCity(city)">
+    <div class="float-left">
+        <b>{{city}}</b>
+    </div>
+    <div class="float-right">
+        <span class="badge badge-dark p-2 more-information" title="click on city to see next 5 days' sealevel at 9">
+            i
+        </span></div>
+    <br>
+    <div class="mt-1">
+        <span>
+            <img src="../../assets/images/sun-rise-icon.jpg" alt="Sunrise" height="30" width="30">
+            <!-- used angular provided pipe/ can be used moment js as well -->
+            {{cityWeatherDetails?.sunrise | date:'mediumTime'}}
+        </span>
+
+        <span>
+            <img src="../../assets/images/sun-set-icon.png" alt="Sunset" height="30" width="30">
+            <!-- used angular provided pipe/ can be used moment js as well -->
+            {{cityWeatherDetails?.sunset | date:'mediumTime' }}
+        </span>
+    </div>
+</div>

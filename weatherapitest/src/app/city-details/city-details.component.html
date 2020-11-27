@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">DateTime</th>
+            <th scope="col">SeaLevel</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of nextFiveDaysWeather">
+            <td>{{r.dateTime}}</td>
+            <td>{{r.seaLevel}}</td>
+        </tr>
+    </tbody>
+</table>
